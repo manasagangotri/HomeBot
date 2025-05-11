@@ -1,0 +1,78 @@
+/* Full-page Background */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  background: linear-gradient(135deg, #6e8efb, #a777e3); /* Background gradient */
+}
+
+/* Login Form Styling */
+.login-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  width: 400px; /* Fixed width for the form */
+  text-align: center;
+}
+
+/* Heading */
+.login-form h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem; /* Larger font size for the heading */
+  color: #333; /* Dark color for contrast */
+}
+
+/* Input fields */
+.login-input {
+  width: 100%; /* Full width of the form */
+  max-width: 350px; /* Match the form width */
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  box-sizing: border-box;
+}
+
+/* Button */
+.login-button {
+  width: 40%; /* Same width as input */
+  max-width: 350px; /* Match input field width */
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background: #6e8efb;
+  color: white;
+  font-size: 1.125rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+/* Button Hover Effect */
+.login-button:hover {
+  background: #5a7be6;
+}
+
+/* Focus State */
+.login-input:focus {
+  border-color: #6e8efb; /* Highlight border on focus */
+  box-shadow: 0 0 5px rgba(110, 142, 251, 0.5); /* Subtle shadow on focus */
+  outline: none; /* Remove default outline */
+}
+
+/* Placeholder Styling */
+.login-input::placeholder {
+  color: #aaa; /* Lighter color for placeholder */
+  font-style: italic; /* Italic style for placeholder */
+}
+
+/* Message Styling */
+.login-message {
+  margin-top: 15px; /* Space above the message */
+  color: #d9534f; /* Red color for error messages */
+  font-size: 0.9rem; /* Smaller font size for messages */
+}
