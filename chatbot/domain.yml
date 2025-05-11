@@ -1,0 +1,149 @@
+version: "3.1"
+
+
+slots:
+  suggest_personalization:
+    type: bool
+    influence_conversation: true
+    mappings:
+      - type: custom
+
+  phase:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: custom
+
+  current_condition:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: custom  # Filled via actions, not user input
+
+  current_condition_idx:
+    type: float
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+  health_conditions:
+    type: list
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+  is_collecting_conditions:
+    type: bool
+    influence_conversation: true
+    mappings:
+      - type: custom
+
+  health_issue:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+  remedy_index:
+    type: any
+    initial_value: 0
+    influence_conversation: false
+    mappings:
+      - type: custom 
+
+  symptom:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: custom
+  
+  multi_select_done:
+    type: bool
+    influence_conversation: true
+    mappings:
+      - type: custom
+      
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - health_query
+  - request_more_remedies
+  - ask_ingredient_uses
+  - ask_health_schedule
+  - deny_helpfulness
+  - ask_bot_purpose
+  - ask_bot_capabilities
+  - ask_bot_data_source
+  - ask_bot_limitations
+  - ask_hydration
+  - ask_bot_wellbeing
+
+
+
+responses:
+
+  utter_greet:
+  - text: "Hello! 👋 How can I help you today with your health or wellness?"
+
+  utter_ask_bot_wellbeing:
+    - text: "I'm doing great, thank you for asking! 😊 How can I help you today?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_ask_bot_purpose:
+    - text: "I’m your home remedies assistant. I help suggest natural treatments, daily health routines, and nutritional guidance for common issues."
+  
+  utter_ask_bot_capabilities:
+    - text: "I can offer home remedies, 7-day healing schedules, health tips, and guide you based on symptoms or conditions."
+  
+
+  utter_ask_bot_data_source:
+    - text: "My information comes from trusted wellness sources and curated home remedy datasets. However, always consult a doctor for serious conditions."
+  
+  utter_ask_bot_limitations:
+    - text: "I'm here to assist with general health tips and home remedies, but I'm not a substitute for professional medical advice."
+  
+  utter_ask_hydration:
+    - text: "Staying hydrated helps maintain energy, skin health, and supports detoxification. Aim for 8–10 glasses of water daily unless advised otherwise."
+  
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_no_problem:
+    - text: "It's okay! Hope you enjoy. 😊"
+    
+  utter_goodbye:
+  - text: "Bye, Take care of your health"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+  
+  utter_ask_ingredient:
+    - text: "Which ingredient are you asking about?"
+
+
+  
+actions:
+  - action_provide_home_remedy
+  - action_generate_health_schedule
+  - action_ingredient_uses
+  - action_ask_health_conditions
+  - action_collect_condition_response
+  - action_suggest_fruit_for_profile
+  - action_show_condition_buttons
+  - action_add_selected_condition
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

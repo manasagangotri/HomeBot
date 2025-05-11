@@ -1,0 +1,36 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+
+- rule: User does not want personalized fruit suggestion
+  steps:
+    - intent: deny
+    - action: utter_no_problem
+
+
+- rule: Show condition buttons
+  steps:
+    - intent: affirm
+    - action: action_show_condition_buttons
+
+- rule: Add selected condition
+  steps:
+    - intent: select_condition
+    - action: action_add_selected_condition
+
+#- rule: User done selecting
+#  steps:
+#    - intent: done_selecting
+    #- action: action_suggest_fruit_for_profile
+#    - action: action_handle_done_selecting

@@ -1,0 +1,81 @@
+version: "3.1"
+
+stories:
+
+- story: provide home remedy
+  steps:
+  - intent: health_query
+  - action: action_provide_home_remedy
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+
+- story: User asks for more remedies
+  steps:
+  - intent: request_more_remedies
+  - action: action_provide_home_remedy
+
+- story: Generate health schedule
+  steps:
+    - intent: ask_health_schedule
+    - action: action_generate_health_schedule
+    
+
+- story: User asks about an ingredient
+  steps:
+    - intent: ask_ingredient_uses
+      entities:
+        - ingredient: "garlic"
+    - action: action_ingredient_uses
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny_helpfulness
+  - action: utter_goodbye
+
+- story: user asks how the bot is
+  steps:
+    - intent: ask_bot_wellbeing
+    - action: utter_ask_bot_wellbeing
+
+- story: user asks bot purpose
+  steps:
+    - intent: ask_bot_purpose
+    - action: utter_ask_bot_purpose
+
+- story: user asks bot capabilities
+  steps:
+    - intent: ask_bot_capabilities
+    - action: utter_ask_bot_capabilities
+
+- story: user asks about data source
+  steps:
+    - intent: ask_bot_data_source
+    - action: utter_ask_bot_data_source
+
+- story: user asks about bot limitations
+  steps:
+    - intent: ask_bot_limitations
+    - action: utter_ask_bot_limitations
+
+- story: user asks hydration tips
+  steps:
+    - intent: ask_hydration
+    - action: utter_ask_hydration

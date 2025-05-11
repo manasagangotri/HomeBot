@@ -1,0 +1,19 @@
+[
+  {
+    "text": "What is the home remedy for headache?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "health_issue",
+        "start": 28,
+        "end": 36,
+        "confidence_entity": 0.569908857345581,
+        "value": "headache",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  }
+]

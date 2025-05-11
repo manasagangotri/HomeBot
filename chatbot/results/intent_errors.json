@@ -1,0 +1,10 @@
+[
+  {
+    "text": "Not really",
+    "intent": "deny_helpfulness",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.6974173784255981
+    }
+  }
+]
