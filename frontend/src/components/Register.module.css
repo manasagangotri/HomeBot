@@ -1,0 +1,103 @@
+/* Full-page Background */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  padding: 2rem;
+}
+
+/* Form Box */
+.form {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Heading */
+h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+/* Error Messages */
+.error, .validationError {
+  color: #d9534f;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+/* Input Fields */
+.input {
+  width: 80%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Input Field Focus */
+.input:focus {
+  border-color: #6e8efb;
+  box-shadow: 0 0 5px rgba(110, 142, 251, 0.5);
+  outline: none;
+}
+
+/* Buttons */
+.button {
+  width: 50%;
+  padding: 12px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 6px;
+  background: #6e8efb;
+  color: white;
+  font-size: 1.125rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+/* Button Hover */
+.button:hover {
+  background: #5a7be6;
+}
+
+/* Back Button */
+.backButton {
+  width: 50%;
+  background: transparent;
+  color: #6e8efb;
+  border: 1px solid #6e8efb;
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+/* Back Button Hover */
+.backButton:hover {
+  background: #6e8efb;
+  color: white;
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+  .form {
+    width: 85%;
+    padding: 1.5rem;
+  }
+}
+

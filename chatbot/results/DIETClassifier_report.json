@@ -1,0 +1,42 @@
+{
+  "health_issue": {
+    "precision": 0.9642857142857143,
+    "recall": 1.0,
+    "f1-score": 0.9818181818181818,
+    "support": 27.0,
+    "confused_with": {}
+  },
+  "condition": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 4.0,
+    "confused_with": {}
+  },
+  "ingredient": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 12.0,
+    "confused_with": {}
+  },
+  "micro avg": {
+    "precision": 0.9772727272727273,
+    "recall": 1.0,
+    "f1-score": 0.9885057471264368,
+    "support": 43.0
+  },
+  "macro avg": {
+    "precision": 0.9880952380952381,
+    "recall": 1.0,
+    "f1-score": 0.993939393939394,
+    "support": 43.0
+  },
+  "weighted avg": {
+    "precision": 0.9775747508305648,
+    "recall": 1.0,
+    "f1-score": 0.9885835095137421,
+    "support": 43.0
+  },
+  "accuracy": 0.998
+}
