@@ -1,0 +1,437 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - hey there
+    - good afternoon
+    - hi bot
+    - greetings
+    - howdy
+    - what's up
+    - hey, how are you
+    - good day
+    - morning!
+    - hey bot
+    - what’s going on
+    - hi there
+    - how’s it going?
+    - hey, I need help
+    - hello there, how’s it going?
+    - hi! need some help
+    - good to see you
+    - hey! can you help me today?
+    - hello bot, what’s up?
+    - good morning, how can I help you today?
+    - hey there, I have some health questions
+    - hello, can you help me out?
+    - how’s your day?
+    - good to chat with you
+    - hey, I’ve got some health queries
+    - hi there, can you assist me today?
+    - good evening, I need some guidance
+    - how can you help me today?
+    - hello, I need some advice
+    - hi, I'm looking for some remedies
+    - good afternoon, do you offer health tips?
+    - hey! I need some health advice
+    - greetings, what can you help me with today?
+    - hi, how do you work?
+    - hey, tell me about yourself
+    - good morning! Need some help with my health
+    - hi, can you assist me with a cold remedy?
+    - good evening, I need a health plan
+    - greetings! What can I learn from you today?
+    - hello, can you give me a health tip?
+    - hey bot, what's new?
+    - hi, can you suggest a healthy diet?
+    - hello there, are you a wellness bot?
+
+
+- intent: ask_ingredient_uses
+  examples: |
+    - How can [garlic](ingredient) help?
+    - What are the benefits of [ginger](ingredient)?
+    - Tell me about the uses of [turmeric](ingredient).
+    - How does [honey](ingredient) help with health?
+    - What is [peppermint](ingredient) good for?
+    - Can you explain the benefits of [cinnamon](ingredient)?
+    - What are the uses of [green tea](ingredient)?
+    - How is [neti pot](ingredient) beneficial?
+    - What does [chicken soup](ingredient) do for health?
+
+
+- intent: ask_health_schedule
+  examples: |
+    - How can I manage [headache](health_issue) at home?
+    - Give me a schedule to recover from [flu](health_issue).
+    - Can you give me a schedule to manage [migraine](health_issue) at home?
+    - What’s a good 7-day plan to recover from [sinus infection](health_issue)?
+    - I need a schedule to treat [acne](health_issue) naturally.
+    - How can I create a routine to deal with [insomnia](health_issue)?
+    - Give me a daily plan to manage [high blood pressure](health_issue).
+    - What’s a good schedule to recover from [food poisoning](health_issue)?
+    - Can you suggest a weekly plan to manage [eczema](health_issue)?
+    - I need a schedule to treat [sore throat](health_issue) at home.
+    - How can I manage [seasonal allergies](health_issue) with a daily routine?
+    - Give me a 7-day plan to recover from [sprained ankle](health_issue).
+    - What’s a good schedule to manage [acid reflux](health_issue)?
+    - Can you suggest a plan to treat [constipation](health_issue) naturally?
+    - I need a schedule to manage [stress](health_issue) at home.
+    - How can I create a routine to deal with [chronic fatigue](health_issue)?
+    - Give me a daily plan to recover from [common cold](health_issue).
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - yes
+    - of course
+    - definitely
+    - sure
+    - I do
+
+
+- intent: deny
+  examples: |
+    - no
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - I don’t
+    - nope
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: request_more_remedies
+  examples: |
+    - more
+    - show me more
+    - give me more
+    - any other remedies?
+    - next
+    - can you show other options?
+    - do you have another suggestion?
+    - what else can I try?
+    - is there another remedy?
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: health_query
+  examples: |
+    - What is the home remedy for headache?
+    - How can I cure cough naturally?
+    - I have a cold, what should I do?
+    - What is the best natural remedy for sore throat?
+    - Can you suggest a remedy for stomach pain?
+    - can you give more remedies?
+    - what are other solutions to it?
+    - my nose is running
+    - I have a runny nose
+    - my nose won't stop dripping
+    - what can I do for a running nose?
+    - suggest remedy for runny nose
+    - I keep sneezing and my nose is watery
+    - my nose is blocked and runny
+    - my throat hurts, what should I do?
+    - how do I get rid of a cough?
+    - what can I take for an upset stomach?
+    - any home tips for a fever?
+
+
+
+
+- intent: deny_helpfulness
+  examples: |
+    - No, it didn't help
+    - Not really
+    - Nope, still feeling bad
+    - I'm still not okay
+    - Nah, that didn't work
+    - I don't feel better
+    - It didn’t help much
+    - I'm still upset
+    - That wasn't helpful
+    - Nope, still feeling the same
+
+
+- intent: ask_bot_purpose
+  examples: |
+    - What do you do?
+    - Who are you?
+    - What can you help me with?
+    - What is your purpose?
+    - Tell me what you do
+    - Are you a home remedies assistant?
+    - Can you help with health issues?
+    - What are you here for?
+    - What’s your main function?
+    - What do you specialize in?
+    - Can you guide me through remedies?
+    - What’s the point of your service?
+    - Do you offer medical help?
+    - Can you give advice on health issues?
+    - Can you help me with symptoms?
+    - What services do you provide?
+    - Can you suggest any health treatments?
+    - What’s your main job?
+    - How do you help me?
+    - Are you a health assistant?
+    - Can I ask for a wellness plan from you?
+    - What can I ask you for?
+    - Are you a health bot?
+    - What can you do for me?
+    - Can you recommend home remedies?
+    - Are you only for natural treatments?
+    - Do you give health tips?
+    - Can you guide me for health improvement?
+    - What can you provide for me?
+    - Are you capable of suggesting remedies?
+    - How do you work?
+    - Can you offer me personalized tips?
+    - Can I ask you anything about health?
+    - Are you a diet assistant?
+    - Can you recommend remedies for ailments?
+    - What should I expect from you?
+    - How do I get help from you?
+    - What’s your use case?
+    - What kind of assistance do you offer?
+    - Do you recommend food for health?
+    - How do you help with health issues?
+    - Can you explain how you help with remedies?
+
+- intent: ask_bot_capabilities
+  examples: |
+    - What can you do?
+    - What kind of help can I get from you?
+    - Can you suggest remedies?
+    - Do you give health tips?
+    - What are your features?
+    - How do you work?
+    - Can I ask for a routine?
+    - Can you provide me a health plan?
+    - Do you offer daily health tips?
+    - Can you suggest a diet for me?
+    - Are you capable of managing health schedules?
+    - Do you recommend home remedies?
+    - Can you help me with skin conditions?
+    - Are you only focused on diet?
+    - Can you suggest an exercise routine?
+    - What are your capabilities?
+    - Can you provide information on wellness?
+    - Do you help with stress management?
+    - Are you only for health advice?
+    - Can you help me with seasonal allergies?
+    - Can you suggest a remedy for headaches?
+    - Can you suggest a health plan for the flu?
+    - Are you capable of creating a workout plan?
+    - Can you offer food advice for a cold?
+    - How can you assist me in staying healthy?
+    - Can you help me treat a sore throat?
+    - Can you provide a daily hydration guide?
+    - Do you give suggestions for energy?
+    - Can you assist me with digestive issues?
+    - Are you able to help with stress relief?
+    - Can you help with managing anxiety?
+    - Do you give fitness recommendations?
+    - Can you provide remedies for insomnia?
+    - Can you suggest wellness activities?
+    - Do you offer relaxation exercises?
+    - Can you suggest remedies for cold and cough?
+    - Can you suggest home remedies for fever?
+    - Can you recommend a routine for healthy skin?
+    - How can I manage my health through diet?
+    - Do you give recommendations for weight loss?
+
+- intent: ask_bot_data_source
+  examples: |
+    - Where do you get your information?
+    - How do you know about these remedies?
+    - Are your remedies based on science?
+    - What's your source?
+    - Is your information reliable?
+    - Where is your health data from?
+    - Who provides your remedies?
+    - How do you collect information?
+    - Are your tips scientifically proven?
+    - What studies back up your advice?
+    - Are your remedies medically approved?
+    - How do you gather health data?
+    - Do you get your remedies from doctors?
+    - Is your information based on research?
+    - Where do your home remedies come from?
+    - Can I trust your advice?
+    - Who verifies your remedies?
+    - What’s your source for health tips?
+    - How do you gather nutrition facts?
+    - Are you connected to medical professionals?
+    - Can I rely on your health advice?
+    - What makes your advice reliable?
+    - Are your remedies endorsed by experts?
+    - Can I get more details about your sources?
+    - Who are your health information partners?
+    - What’s the origin of your health advice?
+    - How do you curate your tips?
+    - Where do you find your recipes?
+    - Are your suggestions research-based?
+    - Do you use scientific databases for your advice?
+    - Who are the authors of your health tips?
+    - Are your recommendations from certified experts?
+    - Can I see the research behind your remedies?
+    - Where do you get your ingredient facts from?
+    - What sources do you use for nutrition facts?
+    - How do you know your home remedies work?
+    - How accurate are your remedies?
+    - Can I trust the data behind your suggestions?
+
+- intent: ask_bot_limitations
+  examples: |
+    - What can’t you do?
+    - Are there things you can't help with?
+    - Can you replace a doctor?
+    - Is it safe to rely only on your advice?
+    - Are you a substitute for professional medical help?
+    - What happens if I need serious medical attention?
+    - Can you give prescriptions?
+    - Are you trained to diagnose diseases?
+    - Can you provide emergency medical help?
+    - Can you treat chronic illnesses?
+    - Can you help with surgeries or procedures?
+    - Can you help me with cancer treatment?
+    - Do you handle complicated medical cases?
+    - Are you capable of providing medical exams?
+    - Can you perform tests or diagnose?
+    - Can you help with hospital referrals?
+    - Can I rely on you for all health-related issues?
+    - Are you certified to give health advice?
+    - Can you make medical decisions?
+    - Can you prescribe medication?
+    - Are you legally allowed to give health advice?
+    - Can you treat mental health issues?
+    - Can you diagnose allergies?
+    - Can you give medical diagnoses?
+    - Do you provide psychological help?
+    - Are you available for emergencies?
+    - Can you provide medical consultations?
+    - Do you give legal health advice?
+    - Can I rely on your tips for serious conditions?
+    - Can you guide me through a health crisis?
+    - Do you know about rare diseases?
+    - Can you give me medical certifications?
+    - Can I ask you about side effects of medicine?
+    - Can you help me with surgery preparation?
+    - Are you capable of handling complex medical issues?
+    - Can you offer advice for serious mental health issues?
+    - Do you provide treatments for life-threatening conditions?
+    - Can you suggest a hospital for emergencies?
+    - Are you a substitute for a healthcare provider?
+    - Can you guide me through an emergency?
+
+- intent: ask_hydration
+  examples: |
+    - How much water should I drink daily?
+    - Can you tell me about hydration?
+    - Is staying hydrated important?
+    - What's the benefit of drinking water?
+    - How does water help the body?
+    - Tips for staying hydrated?
+    - How does hydration affect energy?
+    - Can you give me hydration advice?
+    - How often should I drink water?
+    - What happens if I don’t drink enough water?
+    - Is it important to hydrate during workouts?
+    - How much water is enough per day?
+    - What’s the best way to stay hydrated?
+    - Can I drink juice instead of water?
+    - Is water good for my skin?
+    - What are the symptoms of dehydration?
+    - How can I stay hydrated throughout the day?
+    - How much water should I drink after a workout?
+    - What should I drink for hydration?
+    - Can I drink tea for hydration?
+    - How much water is too much?
+    - How can I track my hydration?
+    - Should I drink water before or after meals?
+    - What happens when I drink too little water?
+    - How does water help digestion?
+    - What’s the link between hydration and headache?
+    - How does hydration affect my weight?
+    - Does hydration improve mood?
+    - How can hydration help with energy levels?
+    - How much water is recommended for my age?
+    - What is the best time to drink water?
+    - What should
+- intent: ask_bot_wellbeing
+  examples: |
+    - how are you?
+    - how is your day?
+    - how are you doing?
+    - are you okay?
+    - how do you feel?
+    - what's up?
+    - how's it going?
+    - how are you today?
+    - are you fine?
+    - are you well?

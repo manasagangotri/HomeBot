@@ -1,0 +1,28 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-health_issue",
+      "2": "I-health_issue",
+      "3": "L-health_issue",
+      "4": "U-health_issue",
+      "5": "B-ingredient",
+      "6": "I-ingredient",
+      "7": "L-ingredient",
+      "8": "U-ingredient",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-health_issue": 1,
+      "I-health_issue": 2,
+      "L-health_issue": 3,
+      "U-health_issue": 4,
+      "B-ingredient": 5,
+      "I-ingredient": 6,
+      "L-ingredient": 7,
+      "U-ingredient": 8,
+      "O": 0
+    },
+    "num_tags": 9
+  }
+]

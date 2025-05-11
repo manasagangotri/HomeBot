@@ -1,0 +1,33 @@
+.dashboard {
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+  }
+  
+  .backButton {
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #8861d0;
+    border: none;
+    cursor: pointer;
+  }
+  
+  h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .feedbackTable {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .feedbackTable th,
+  .feedbackTable td {
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+    text-align: left;
+  }
+  
+  .feedbackTable th {
+    background-color: #f4f4f4;
+  }
+  
