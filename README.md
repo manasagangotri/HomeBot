@@ -1,1 +1,7 @@
 # HomeBot
+
+## Abstract
+ 
+This project introduces a Home Remedies Chatbot aimed at promoting natural health solutions by providing generalized home remedies for common health issues. The chatbot is developed using Rasa and integrates a pre-trained language model to understand user queries through natural language processing and respond with relevant home remedies. It also employs embedding-based similarity techniques to accurately match user-described symptoms with appropriate remedies from a curated dataset.
+To improve user engagement and accessibility, the chatbot supports voice feature. For each health issue addressed, the bot not only suggests remedies but also provides external reference links for key ingredients, ensuring users can easily access or learn more about them. A distinctive feature of the system is the feedback and suggestion module, which invites users to share their own knowledge of remedies. These inputs are stored in a secure admin dashboard, enabling the administrator to review, validate, and incorporate valuable user contributions into the training data—making the chatbot continuously improvable.
+The bot further offers ingredient-specific information and suggests generalized daily health schedules that users can follow to manage or prevent the given health issue. The system is designed to serve as a first-level, informative assistant for promoting wellness using traditional and natural practices.
